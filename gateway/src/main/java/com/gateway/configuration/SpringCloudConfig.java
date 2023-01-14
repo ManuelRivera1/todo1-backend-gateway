@@ -32,9 +32,9 @@ public class SpringCloudConfig {
                         .uri(this.uriConsultas)
                         .id("cosultasModule"))
 
-                .route(r -> r.path("/general/**")
+                .route(r -> r.path("/acceso-general/**")
                         .uri(this.uriGeneral)
-                        .id("generalModule"))
+                        .id("accesoGeneral"))
                 
                 .build();
     }
