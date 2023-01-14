@@ -1,0 +1,22 @@
+server:
+ port: 8181
+
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: gateway,health,info
+        
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins:
+            - "*"
+            allowed-methods:
+            - "*"
+            allowed-headers:
+            - "Content-Type"
